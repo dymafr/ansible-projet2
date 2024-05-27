@@ -1,5 +1,5 @@
 <?php
-$articles = json_decode(file_get_contents('./articles.json'), true);
+$articles = json_decode(file_get_contents('/var/www/app/data/articles.json'), true);
 
 $dns = 'mysql:host=' . getenv('DB_HOST') . ';dbname=' . getenv('DB_NAME');
 $user = getenv('DB_USER');
