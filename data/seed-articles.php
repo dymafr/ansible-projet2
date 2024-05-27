@@ -5,15 +5,6 @@ $dns = 'mysql:host=' . getenv('DB_HOST') . ';dbname=' . getenv('DB_NAME');
 $user = getenv('DB_USER');
 $pwd = getenv('DB_PASSWORD');
 
-try {
-    $dbh = new PDO($dns, $user, $pwd);
-
-    $dbh->exec("CREATE DATABASE blog;");
-}
-catch (PDOException $e) {
-    die("DB ERROR: " . $e->getMessage());
-}
-
 $pdo = new PDO($dns, $user, $pwd);
 
 $statements = [
